@@ -1,0 +1,70 @@
+Running HiGHS 1.8.1 (git hash: 4a7f24a): Copyright (c) 2024 HiGHS under MIT licence terms
+Reading model file  016_0_old.lp.lp  returns a status of  HighsStatus.kOk
+Coefficient ranges:
+  Matrix [1e-03, 1e+03]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 2e+09]
+  RHS    [1e+00, 1e+03]
+Presolving model
+1036 rows, 1199 cols, 4580 nonzeros  0s
+844 rows, 907 cols, 4474 nonzeros  0s
+546 rows, 449 cols, 2367 nonzeros  0s
+468 rows, 382 cols, 1801 nonzeros  0s
+
+Solving MIP model with:
+   468 rows
+   382 cols (48 binary, 0 integer, 6 implied int., 328 continuous)
+   1801 nonzeros
+MIP-Timing:       0.021 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -0.858054243    inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   -0.2656086957   inf                  inf        0      0      2       445     0.0s
+
+Symmetry detection completed in 0.0s
+No symmetry present
+
+ T     159      19        58  13.21%   -0.2197022656   -0.1164967345     88.59%     1191    107    490     29489     1.6s
+ T     687      48       269  94.96%   -0.1916695579   -0.1164967345     64.53%     1439    106   1495     44275     2.5s
+
+Restarting search from the root node
+       835       0         0   0.00%   -0.1164967345   -0.1164967345      0.00%     1041      0   1859     49570     2.9s
+
+Solving report
+  Model             016_0_old.lp
+  Status            Optimal
+  Primal bound      -0.1164967345
+  Dual bound        -0.1164967345
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.866055388917
+  Solution status   feasible
+                    -0.1164967345 (objective)
+                    0 (bound viol.)
+                    6.19589954538e-12 (int. viol.)
+                    0 (row viol.)
+  Timing            2.86 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 3
+  Nodes             835
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     49570 (total)
+                    17991 (strong br.)
+                    2952 (separation)
+                    7578 (heuristics)
+Model status =  Optimal
+
+Optimal objective =  -0.11649673450012543
+Iteration count =  49570
+Primal solution status =  Feasible
+Dual solution status =  None
+Basis validity =  Not valid
+Writing the solution to ./new_solver_result.sol
+
