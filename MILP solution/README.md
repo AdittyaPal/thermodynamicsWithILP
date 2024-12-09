@@ -1,0 +1,1 @@
+This directory contains the constructed MILP model as base.lp, and solved using HiGHS using the script in solve.py. The solution is written to solver_result.sol while the terminal output is logged to output..txt.
