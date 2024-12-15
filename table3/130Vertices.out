@@ -1,0 +1,67 @@
+Running HiGHS 1.8.1 (git hash: 4a7f24a): Copyright (c) 2024 HiGHS under MIT licence terms
+Reading model file  130Vertices.lp  returns a status of  HighsStatus.kOk
+Coefficient ranges:
+  Matrix [1e-03, 1e+03]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 2e+09]
+  RHS    [1e+00, 1e+03]
+Presolving model
+2659 rows, 2624 cols, 11277 nonzeros  0s
+1335 rows, 1490 cols, 7163 nonzeros  0s
+701 rows, 623 cols, 3263 nonzeros  0s
+592 rows, 536 cols, 2396 nonzeros  0s
+
+Solving MIP model with:
+   592 rows
+   536 cols (70 binary, 0 integer, 11 implied int., 455 continuous)
+   2396 nonzeros
+MIP-Timing:       0.022 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -1.217138183    inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   -0.2923176938   inf                  inf        0      0      2       622     0.0s
+
+Symmetry detection completed in 0.0s
+No symmetry present
+
+       841      69       305  54.60%   -0.2159928932   inf                  inf     1805    141   1988     76627     5.0s
+ T    1985     112       718  79.38%   -0.1867494083   -0.147813448      26.34%     2055    156   4026    114361     7.5s
+      2856       0      1178 100.00%   -0.147813448    -0.147813448       0.00%     1807     74   6677    153908    10.1s
+
+Solving report
+  Model             130Vertices
+  Status            Optimal
+  Primal bound      -0.147813448
+  Dual bound        -0.147813448
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.582185037105
+  Solution status   feasible
+                    -0.147813448 (objective)
+                    0 (bound viol.)
+                    2.9003502106e-12 (int. viol.)
+                    0 (row viol.)
+  Timing            10.08 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 4
+  Nodes             2856
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     153908 (total)
+                    32858 (strong br.)
+                    11959 (separation)
+                    15585 (heuristics)
+Model status =  Optimal
+
+Optimal objective =  -0.14781344800002835
+Iteration count =  153908
+Primal solution status =  Feasible
+Dual solution status =  None
+Basis validity =  Not valid
+Writing the solution to ./130Vertices.sol

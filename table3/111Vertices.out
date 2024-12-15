@@ -1,0 +1,74 @@
+Running HiGHS 1.8.1 (git hash: 4a7f24a): Copyright (c) 2024 HiGHS under MIT licence terms
+Reading model file  111Vertices.lp  returns a status of  HighsStatus.kOk
+Coefficient ranges:
+  Matrix [1e-03, 1e+03]
+  Cost   [1e+00, 1e+00]
+  Bound  [1e+00, 2e+09]
+  RHS    [1e+00, 1e+03]
+Presolving model
+2311 rows, 2396 cols, 10021 nonzeros  0s
+1301 rows, 1439 cols, 6958 nonzeros  0s
+696 rows, 622 cols, 3203 nonzeros  0s
+590 rows, 536 cols, 2367 nonzeros  0s
+
+Solving MIP model with:
+   590 rows
+   536 cols (69 binary, 0 integer, 11 implied int., 456 continuous)
+   2367 nonzeros
+MIP-Timing:       0.021 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   -1.207361117    inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   -0.2923532264   inf                  inf        0      0      3       642     0.0s
+
+Symmetry detection completed in 0.0s
+No symmetry present
+
+      1172      97       435  35.34%   -0.2086516645   inf                  inf     2044    152   2079     82002     5.1s
+ T    1825      90       706  67.84%   -0.2001093846   -0.07610174      162.95%     1215    129   3174    109226     6.8s
+ T    1836      88       708  67.85%   -0.2001093846   -0.1119568515     78.74%     1217    129   3178    109413     6.8s
+ T    1839      88       710  67.85%   -0.2001093846   -0.1119568515     78.74%     1219    129   3179    109439     6.8s
+ T    1847      88       716  67.85%   -0.2001093846   -0.1119568515     78.74%     1223    129   3227    109542     6.8s
+ T    1875      55       726  68.39%   -0.2001093846   -0.147811963      35.38%     1228    129   3282    110036     6.9s
+ T    1891      56       733  68.39%   -0.2001093846   -0.147811963      35.38%     1231    129   3318    110277     6.9s
+ T    1917      61       745  68.43%   -0.1998151627   -0.147811963      35.18%     1252    143   3387    111151     6.9s
+ T    1936      63       753  68.43%   -0.1998151627   -0.147811963      35.18%     1259    143   3433    111490     7.0s
+      2208       0       897 100.00%   -0.1478237091   -0.147811963       0.01%     1394    113   4212    125119     7.9s
+
+Solving report
+  Model             111Vertices
+  Status            Optimal
+  Primal bound      -0.147811963001
+  Dual bound        -0.147823709057
+  Gap               0.00795% (tolerance: 0.01%)
+  P-D integral      0.326243262921
+  Solution status   feasible
+                    -0.147811963001 (objective)
+                    0 (bound viol.)
+                    1.08100315559e-10 (int. viol.)
+                    0 (row viol.)
+  Timing            7.86 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 3
+  Nodes             2208
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     125119 (total)
+                    32892 (strong br.)
+                    10448 (separation)
+                    9183 (heuristics)
+Model status =  Optimal
+
+Optimal objective =  -0.14781196300106503
+Iteration count =  125119
+Primal solution status =  Feasible
+Dual solution status =  None
+Basis validity =  Not valid
+Writing the solution to ./111Vertices.sol
